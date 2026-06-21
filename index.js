@@ -1,7 +1,4 @@
-/* ============================================
-   INDEX.JS — Phase 3: Portfolio Interactivity
-   Vanilla JS only — no external libraries
-   ============================================ */
+
 
 'use strict';
 
