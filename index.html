@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Ahmad Alsmadi, Full Stack Developer. CS graduate specializing in ASP.NET Core MVC, SQL Server, and the MERN stack. View projects, skills, and experience." />
+  <meta name="author" content="Ahmad Alsmadi" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahmad Alsmadi — Full Stack Developer" />
+  <meta property="og:description" content="Portfolio of Ahmad Alsmadi, Full Stack Developer. CS graduate specializing in ASP.NET Core MVC, SQL Server, and the MERN stack." />
+  <meta property="og:image" content="https://ahmadalsmadi.dev/assets/images/profile.jpg" />
+  <meta property="og:url" content="https://ahmadalsmadi.dev/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ahmad Alsmadi — Full Stack Developer" />
+  <meta name="twitter:description" content="Portfolio of Ahmad Alsmadi, Full Stack Developer. CS graduate specializing in ASP.NET Core MVC, SQL Server, and the MERN stack." />
+  <meta name="twitter:image" content="https://ahmadalsmadi.dev/assets/images/profile.jpg" />
+  <title>Ahmad Alsmadi — Full Stack Developer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) { /* localStorage unavailable */ }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header id="navbar" class="navbar">
+    <nav class="navbar__inner container" aria-label="Main navigation">
+      <a href="#hero" class="navbar__brand">Ahmad<span class="brand-dot">.dev</span></a>
+      <ul id="nav-links" class="navbar__links">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="hero section">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="blob blob--3"></div>
+      </div>
+      <div class="hero__content container">
+        <p class="hero__greeting">Hello, world —</p>
+        <h1 class="hero__title">Hi, I'm <span class="gradient-text">Ahmad Alsmadi</span></h1>
+        <p class="hero__subtitle"><span id="typing-text"></span><span class="cursor" aria-hidden="true">|</span></p>
+        <p class="hero__tagline">Computer Science graduate passionate about building modern web applications and transitioning from ASP.NET Core development into the MERN stack.</p>
+        <div class="hero__buttons">
+          <a href="#projects" class="btn btn--primary">View My Projects</a>
+          <a href="assets/Ahmad_CV_Alsmadi.pdf" download="Ahmad_CV_Alsmadi.pdf" class="btn btn--secondary" target="_blank">Download CV</a>
+        </div>
+        <div class="hero__image">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Portrait of Ahmad Alsmadi, Full Stack Developer and Computer Science graduate"
+            width="400"
+            height="400"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section__title reveal">About Me</h2>
+        <p class="section__subtitle reveal">Get to know me</p>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p>I am a Computer Science graduate from the World Islamic Sciences and Education University (WISE) in Amman, Jordan. My technical foundation is built on C#, ASP.NET Core MVC, and SQL Server. I am currently expanding my expertise into the MERN Stack (MongoDB, Express.js, React, and Node.js) to become a versatile Full Stack Developer capable of building complete modern web applications. I enjoy solving problems, learning new technologies, and creating software that provides real value to users.</p>
+          </div>
+          <div class="about__stats">
+            <div class="stat-card reveal">
+              <span class="stat-card__number" data-target="4">0</span><span class="stat-card__plus">+</span>
+              <span class="stat-card__label">Projects Completed</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-card__number">4</span>
+              <span class="stat-card__label">Months Field Training</span>
+            </div>
+            <div class="stat-card reveal">
+              <span class="stat-card__number" data-target="8">0</span><span class="stat-card__plus">+</span>
+              <span class="stat-card__label">Core Technologies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS SECTION ========== -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <h2 class="section__title reveal">Skills</h2>
+        <p class="section__subtitle reveal">Technologies I work with</p>
+        <div class="skills__grid">
+          <!-- Backend -->
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Backend</h3>
+            <ul class="skill-card__list">
+              <li class="skill-item"><span class="skill-item__name">C#</span></li>
+              <li class="skill-item"><span class="skill-item__name">ASP.NET Core MVC</span></li>
+              <li class="skill-item"><span class="skill-item__name">SQL Server</span></li>
+            </ul>
+          </div>
+          <!-- Frontend -->
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Frontend</h3>
+            <ul class="skill-card__list">
+              <li class="skill-item"><span class="skill-item__name">HTML</span></li>
+              <li class="skill-item"><span class="skill-item__name">CSS</span></li>
+              <li class="skill-item"><span class="skill-item__name">JavaScript</span></li>
+              <li class="skill-item"><span class="skill-item__name">React</span><span class="badge badge--learning">Currently Learning</span></li>
+            </ul>
+          </div>
+          <!-- Tools -->
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Tools</h3>
+            <ul class="skill-card__list">
+              <li class="skill-item"><span class="skill-item__name">Git</span></li>
+              <li class="skill-item"><span class="skill-item__name">GitHub</span></li>
+              <li class="skill-item"><span class="skill-item__name">Visual Studio</span></li>
+              <li class="skill-item"><span class="skill-item__name">VS Code</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS SECTION ========== -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <h2 class="section__title reveal">Projects</h2>
+        <p class="section__subtitle reveal">What I've built</p>
+        <!-- Filter Buttons -->
+        <div class="projects__filters reveal">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="dotnet" aria-pressed="false">C# / .NET</button>
+          <button type="button" class="filter-btn" data-filter="javascript" aria-pressed="false">JavaScript</button>
+        </div>
+        <!-- Project Cards Grid -->
+        <div class="projects__grid">
+          <!-- Project 1: LapAdvisor -->
+          <article class="project-card reveal" data-category="dotnet" tabindex="0" aria-label="LapAdvisor — Laptop Recommendation System. Press Enter to view details.">
+            <div class="project-card__image">
+              <img
+                src="assets/images/project-lapadvisor.png"
+                alt="Screenshot of LapAdvisor showing laptop product cards, search filters, and a recommendation results page"
+                width="640"
+                height="400"
+            loading="lazy"
+            decoding="async"
+          />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">LapAdvisor – Laptop Recommendation System</h3>
+              <p class="project-card__desc">Graduation project. A three-layer ASP.NET Core MVC laptop recommendation and e-commerce platform that helps users discover the best laptop according to their needs.</p>
+              <ul class="project-card__features">
+                <li>Rule-based recommendation engine</li>
+                <li>Product comparison</li>
+                <li>Shopping cart &amp; wishlist</li>
+                <li>Admin dashboard</li>
+                <li>User authentication</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">ASP.NET Core MVC</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL Server</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/ahmadony/LapAdvisor" target="_blank" rel="noopener noreferrer" class="btn btn--small" aria-label="View LapAdvisor source code on GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Weather App -->
+          <article class="project-card reveal" data-category="javascript" tabindex="0" aria-label="Weather App. Press Enter to view details.">
+            <div class="project-card__image">
+              <img
+                src="assets/images/project-weather.png"
+                alt="Screenshot of the Weather App displaying current temperature, conditions, and a multi-day forecast"
+                width="640"
+                height="400"
+            loading="lazy"
+            decoding="async"
+          />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Weather App</h3>
+              <p class="project-card__desc">Weather application using the OpenWeatherMap API with real-time data fetching and dynamic UI updates.</p>
+              <ul class="project-card__features">
+                <li>Real-time weather data</li>
+                <li>Dynamic UI updates</li>
+                <li>Async/Await</li>
+                <li>Fetch API</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">API</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/ahmadony/weather-app" target="_blank" rel="noopener noreferrer" class="btn btn--small" aria-label="View Weather App source code on GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Personal Portfolio Website -->
+          <article class="project-card reveal" data-category="javascript" tabindex="0" aria-label="Personal Portfolio Website. Press Enter to view details.">
+            <div class="project-card__image">
+              <img
+                src="assets/images/project-portfolio.png"
+                alt="Screenshot of Ahmad Alsmadi's personal portfolio website homepage"
+                width="640"
+                height="400"
+            loading="lazy"
+            decoding="async"
+          />
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Personal Portfolio Website</h3>
+              <p class="project-card__desc">This very website — a premium, fully responsive portfolio built from scratch with vanilla HTML, CSS, and JavaScript, no frameworks.</p>
+              <ul class="project-card__features">
+                <li>Dark/light theme toggle</li>
+                <li>Typing animation hero</li>
+                <li>Scroll-triggered reveal animations</li>
+                <li>Dynamic project filtering</li>
+              </ul>
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/ahmadony" target="_blank" rel="noopener noreferrer" class="btn btn--small" aria-label="View Portfolio source code on GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE SECTION ========== -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <h2 class="section__title reveal">Experience</h2>
+        <p class="section__subtitle reveal">My professional journey</p>
+        <div class="timeline reveal">
+          <div class="timeline__line" aria-hidden="true"></div>
+          <div class="timeline__entry">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__title">Field Training</h3>
+              <span class="timeline__company">Clever Mind POB</span>
+              <p class="timeline__desc">Worked on front-end development tasks, responsive web design, and real-world web development workflows during the field training period.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section__title reveal">Get In Touch</h2>
+        <p class="section__subtitle reveal">Let's work together</p>
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <a href="https://github.com/ahmadony" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit Ahmad Alsmadi on GitHub (opens in new tab)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              <span>github.com/ahmadony</span>
+            </a>
+            <a href="https://linkedin.com/in/ahmad-alsmadi-dev" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Visit Ahmad Alsmadi on LinkedIn (opens in new tab)">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>linkedin.com/in/ahmad-alsmadi-dev</span>
+            </a>
+            <a href="mailto:ahmadalsmadi2004@gmail.com" class="contact-link" aria-label="Email Ahmad Alsmadi at ahmadalsmadi2004@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>ahmadalsmadi2004@gmail.com</span>
+            </a>
+          </div>
+          <form id="contact-form" class="contact__form reveal" novalidate>
+            <div class="form-group">
+              <label for="form-name">Name</label>
+              <input type="text" id="form-name" name="name" placeholder="Your name" required autocomplete="name" />
+              <span class="form-error" id="error-name" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              <span class="form-error" id="error-email" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="5" placeholder="Your message..." required></textarea>
+              <span class="form-error" id="error-message" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <div id="form-success" class="form-success" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__socials">
+        <a href="https://github.com/ahmadony" target="_blank" rel="noopener noreferrer" aria-label="Ahmad Alsmadi on GitHub (opens in new tab)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/ahmad-alsmadi-dev" target="_blank" rel="noopener noreferrer" aria-label="Ahmad Alsmadi on LinkedIn (opens in new tab)">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:ahmadalsmadi2004@gmail.com" aria-label="Email Ahmad Alsmadi at ahmadalsmadi2004@gmail.com">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+      <p class="footer__copy">&copy; 2026 Ahmad Alsmadi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog">
+      <button type="button" class="modal__close" aria-label="Close project details" data-modal-close>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div id="modal-content" class="modal__content"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Scroll back to top" tabindex="-1">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script src="index.js" defer></script>
+</body>
+</html>
