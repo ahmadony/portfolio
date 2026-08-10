@@ -39,7 +39,7 @@ export default function Aboutme() {
             About Me
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            A computer science student building for the web
+            Full-Stack Web Developer building clean, responsive web applications.
           </h2>
         </motion.div>
 
